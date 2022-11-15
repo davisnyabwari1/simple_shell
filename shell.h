@@ -5,5 +5,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+extern char **environ;
+
+void prompt(void);
+int _getline(void);
+void tokenize(char **line);
+int exec(char *argv[]);
+
 
 #endif /* #ifndef SHELL H */
