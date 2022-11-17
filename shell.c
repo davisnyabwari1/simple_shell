@@ -7,7 +7,7 @@
  *
  * Return: Always 0
  */
-int main(int ac, char **av)
+int main(void)
 {
 	int mode = 1;
 
