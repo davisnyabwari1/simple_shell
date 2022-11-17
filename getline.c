@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * getline - reads line from terminal
+ * _getline - reads line from terminal
  *
- * Return: buffer containing command
+ * Return: 0 on success else 1
  */
 int _getline(void)
 {
@@ -11,7 +11,10 @@ int _getline(void)
 	size_t n = 0;
 
 	if (getline(&line, &n, stdin) == -1)
+	{
+		perror("Error");
 		return (1);
+	}
 
 	tokenize(&line);
 	return (0);

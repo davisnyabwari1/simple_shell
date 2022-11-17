@@ -10,6 +10,7 @@
 int main(int ac, char **av)
 {
 	int mode = 1;
+
 	while (mode)
 	{
 		mode = isatty(STDIN_FILENO);
