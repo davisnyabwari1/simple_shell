@@ -12,5 +12,5 @@ void tokenize(char **line)
 	argv[1] = NULL;
 
 	exec(argv);
-	free(*line);
+	free(line);
 }
