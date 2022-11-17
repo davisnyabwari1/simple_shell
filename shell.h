@@ -11,9 +11,9 @@
 extern char **environ;
 
 void prompt(void);
-int _getline(void);
-void tokenize(char **line);
-int exec(char *argv[]);
+int _getline(char ***av);
+void tokenize(char **line, char ****av);
+int exec(char *argv[], char *****av);
 
 
 #endif /* #ifndef SHELL H */

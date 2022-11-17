@@ -7,17 +7,16 @@
  *
  * Return: Always 0
  */
-int main(void)
+int main(int ac __attribute__((unused)), char **av)
 {
-	int mode = 1;
+	int mode = STDOUT_FILENO;
 
 	while (mode)
 	{
 		mode = isatty(STDIN_FILENO);
 		if (mode == 1)
 			prompt();
-
-		_getline();
+		_getline(&av);
 	}
 	return (0);
 }
