@@ -3,7 +3,7 @@
 /**
  * _getline - reads line from terminal
  *
- * Return: 0 on success else 1
+ * Return: 0 on success else -1
  */
 int _getline(void)
 {
@@ -13,9 +13,9 @@ int _getline(void)
 	if (getline(&line, &n, stdin) == -1)
 	{
 		perror("Error");
-		return (1);
+		exit(EXIT_FAILURE);
 	}
 
 	tokenize(&line);
-	return (0);
+	exit(EXIT_SUCCESS);
 }
