@@ -6,7 +6,7 @@
  *
  * Return: 0 if success else 1
  */
-int exec(char *argv[])
+int exec(char *argv[], char *****av)
 {
 	int status;
 
@@ -14,13 +14,13 @@ int exec(char *argv[])
 	{
 		if (execve(argv[0], argv, environ) == -1)
 		{
-			perror("Error");
-			return (1);
+			perror(***av[0]);
+			exit(EXIT_FAILURE);
 		}
 	}
 	else
 	{
 		wait(&status);
 	}
-	return (0);
+	exit(EXIT_SUCCESS);
 }
