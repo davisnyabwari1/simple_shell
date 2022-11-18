@@ -1,4 +1,4 @@
-##The Simple Shell
+## The Simple Shell 
 The simple shell project is a project that helps a student to understand the advanced
 concepts behind the shell program include process, system call, bit manipulation, file managment, error handling ...
 
