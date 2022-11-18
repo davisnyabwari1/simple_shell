@@ -6,4 +6,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
+char *readline();
+char **tokenize(char *buf);
 #endif /* #ifndef SHELL H */
